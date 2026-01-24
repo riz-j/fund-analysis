@@ -22,21 +22,20 @@ def calculate_fund_performance(db_path, fund_name, year):
     quarters = ['q1', 'q2', 'q3', 'q4']
     quarterly_returns = []
     
-    print(f"Analysis for {fund_name} ({year})\n")
-    print(f"{'Quarter':<10} | {'Known Weight %':<15} | {'Quarter Return %':<20}")
+    print(f"Analysis for {fund_name} ({year}) - Manager-Weighted Portfolio\n")
+    print(f"{'Quarter':<10} | {'Analyzed Weight %':<18} | {'Portfolio Return %':<20}")
     print("-" * 55)
 
     for q in quarters:
         q_data = df[df['quarter'] == q].copy()
         
         if q_data.empty:
-            print(f"{q:<10} | {'N/A':<15} | {'N/A':<20}")
+            print(f"{q:<10} | {'N/A':<18} | {'N/A':<20}")
             continue
 
         # Filter out rows with missing performance data
         valid_data = q_data.dropna(subset=['quarter_performance']).copy()
         
-        total_weight = q_data['portfolio_percentage'].sum()
         known_weight = valid_data['portfolio_percentage'].sum()
         
         # Calculate contribution of known positions
@@ -56,7 +55,7 @@ def calculate_fund_performance(db_path, fund_name, year):
 
         quarterly_returns.append(q_return)
         
-        print(f"{q:<10} | {known_weight:<15.2f} | {q_return:<20.2f}")
+        print(f"{q:<10} | {known_weight:<18.2f} | {q_return:<20.2f}")
 
     # Annual Link
     annual_return = 1.0

@@ -37,5 +37,7 @@ CREATE TABLE IF NOT EXISTS positions (
 - This file is used to populate the database with the filings in `filings.json`.
 
 ### `analyze_fund_annual_performance.py`
-- This file is used to find the aggregate performance of the fund. 
-- This file takes in some arguments, so be sure to read it first before using it.
+- This file calculates the quarter-by-quarter performance of the manager-weighted portfolio.
+- It displays a table with analyzed weight percentages and portfolio returns per quarter.
+- It also shows the aggregate annual return based on the manager-weighted performance.
+- Usage: `python3 analyze_fund_annual_performance.py "Fund Name" YEAR`
