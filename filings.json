@@ -65,5 +65,72 @@
 			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000116469115000174/peconicq32015.inftab.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000116469116000237/peconicq42015.inftab.xml"
 		}
+	},
+	"donald-smith": {
+		"2025": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000019/13finfotable1Q25.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000046/13finfotable2Q25.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000078/13finfotable3Q25.xml"
+		},
+		"2024": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437524000014/13finfotable1Q24.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437524000015/13finfotable2Q24.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437524000034/13finfotable3Q24.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000002/13finfotable4Q24.xml"
+		},
+		"2023": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437523000015/13finfotable1Q23.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437523000016/13finfotable2Q23.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437523000017/13finfotable3Q23.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437524000002/13finfotable4Q23.xml"
+		},
+		"2022": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437522000012/13finfortable1Q22.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437522000013/13finfortable2Q22.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437522000014/13finfortable3Q22.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437523000002/13finfortable4Q22.xml"
+		},
+		"2021": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437521000023/13finfortable1Q21.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437521000024/13finfortable2Q21.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437521000025/13finfortable3Q21.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437522000011/13finfortable4Q21.xml"
+		},
+		"2020": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437520000024/13finfortable1Q20.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437520000025/13finfortable2Q20.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437520000026/13finfortable3Q20.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437521000002/13finfortable4Q20.xml"
+		},
+		"2019": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437519000029/13finfortable1Q19.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437519000030/13finfortable2Q19.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437519000031/13finfortable3Q19.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437520000002/13finfortable4Q19.xml"
+		},
+		"2018": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437518000028/13finfortable1Q18.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437518000029/13finfortable2Q18A.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437518000030/13finfortable3Q18.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437519000001/13finfortable4Q18.xml"
+		},
+		"2017": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000038/13finfortable1Q17revised.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000039/13finfortable2Q17revised.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000047/13finfortable3Q17.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437518000027/13finfortable4Q17.xml"
+		},
+		"2016": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000034/13finfortable1Q16revised.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000035/13finfortable2Q16revised.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000036/13finfortable3Q16revised.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000037/13finfortable4Q16revised.xml"
+		},
+		"2015": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437515000035/13finfortable1Q15A.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437515000036/13finfortable2Q15A.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000032/13finfortable3Q15revised.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000033/13finfortable4Q15revised.xml"
+		}
 	}
 }
