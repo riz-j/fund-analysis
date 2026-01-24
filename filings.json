@@ -1,0 +1,15 @@
+{
+	"peconic-partners": {
+		"2025": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000185520525000032/peconic_13f03312025.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000185520525000058/peconic_13f06302025.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000105046425000005/peconic_13f09302025.xml"
+		},
+		"2024": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000185520524000026/0001855205-24-000026-index.htm",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000185520524000038/peconic_13f06302024.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000185520524000059/peconic_13f09302024.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000185520525000017/peconic_13f12312024.xml"
+		}
+	}
+}
