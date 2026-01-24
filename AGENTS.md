@@ -36,6 +36,6 @@ CREATE TABLE IF NOT EXISTS positions (
 ### `fetch_data.py`
 - This file is used to populate the database with the filings in `filings.json`.
 
-### `analyze_fund_annual_performance`
+### `analyze_fund_annual_performance.py`
 - This file is used to find the aggregate performance of the fund. 
 - This file takes in some arguments, so be sure to read it first before using it.
