@@ -118,35 +118,49 @@ def process_filing(conn, fund_name, year, quarter, url):
         print(f"XML Parse Error: {e}")
         return
 
-    # Handle Namespace
-    ns_map = {}
-    if '}' in root.tag:
-        uri = root.tag.split('}')[0].strip('{')
-        ns_map = {'ns': uri}
-    
+    # Parse XML
+    try:
+        root = ET.fromstring(xml_content)
+    except ET.ParseError as e:
+        print(f"XML Parse Error: {e}")
+        return
+
     positions = []
     total_value = 0.0
 
-    # Find all infoTables
-    # Use namespace if present
-    findall_path = 'ns:infoTable' if ns_map else 'infoTable'
-    
-    for info in root.findall(findall_path, namespaces=ns_map):
+    # Parse rows by iterating root children and checking tag name ignoring namespace
+    for info in root:
+        # Check if tag is infoTable (ignoring namespace)
+        tag_local = info.tag.split('}')[-1] if '}' in info.tag else info.tag
+        if 'infoTable' not in tag_local and 'InfoTable' not in tag_local:
+            continue
+
         try:
-            name_of_issuer = info.find('ns:nameOfIssuer', namespaces=ns_map)
-            name_of_issuer = name_of_issuer.text if name_of_issuer is not None else "Unknown"
+            name_of_issuer = "Unknown"
+            cusip = None
+            val = 0.0
+            shares = 0
             
-            cusip_el = info.find('ns:cusip', namespaces=ns_map)
-            cusip = cusip_el.text if cusip_el is not None else None
-            
-            val_el = info.find('ns:value', namespaces=ns_map)
-            val = float(val_el.text) if val_el is not None else 0.0
-            
-            shrs_el = info.find('ns:shrsOrPrnAmt/ns:sshPrnamt', namespaces=ns_map)
-            if shrs_el is None: # try without nested path sometimes? No, standard is nested
-                 shrs_el = info.find('ns:sshPrnamt', namespaces=ns_map)
-            shares = int(shrs_el.text) if shrs_el is not None else 0
-            
+            # Iterate children of infoTable
+            for child in info:
+                child_tag = child.tag.split('}')[-1] if '}' in child.tag else child.tag
+                
+                if child_tag == 'nameOfIssuer':
+                    name_of_issuer = child.text if child.text else "Unknown"
+                elif child_tag == 'cusip':
+                    cusip = child.text
+                elif child_tag == 'value':
+                    val = float(child.text) if child.text else 0.0
+                elif child_tag == 'shrsOrPrnAmt':
+                    # Handle nested shares
+                    for sub in child:
+                        sub_tag = sub.tag.split('}')[-1] if '}' in sub.tag else sub.tag
+                        if sub_tag == 'sshPrnamt':
+                            shares = int(sub.text) if sub.text else 0
+                elif child_tag == 'sshPrnamt':
+                    # Handle flat shares (rare but possible mapping difference)
+                    shares = int(child.text) if child.text else 0
+
             if cusip:
                 positions.append({
                     'cusip': cusip,
