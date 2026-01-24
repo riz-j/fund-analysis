@@ -6,10 +6,8 @@ Python3
 
 # Important
 - Do NOT use the `agentic_fetch` tool! Always use tavily for web search.
-- When searching for performance per quarter, do the search one by one:
-  - "SP500 total return performance quarter 1 2025"
-  - "SP500 total return performance quarter 2 2025"
-  - etc.
+- When searching for performance per quarter, use this keyword:
+  - Example: "SP500 total return by quarter 2025"
 
 # Data
 - The data for the positions held by hedge funds are held in the `funds.db` database.

@@ -1,0 +1,657 @@
+[~/Desktop/fund-analysis] rizki   master  python fetch_data.py                    
+Processing Peconic Partners 2025 q1...
+Processing Peconic Partners 2025 q2...
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Processing Peconic Partners 2025 q3...
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Processing Peconic Partners 2024 q1...
+Processing Peconic Partners 2024 q2...
+Processing Peconic Partners 2024 q3...
+Processing Peconic Partners 2024 q4...
+Processing Peconic Partners 2023 q1...
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 24790A101 (DENBURY INC)
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TECK-B-TO"}}}
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2023 q2...
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Processing Peconic Partners 2023 q3...
+Processing Peconic Partners 2023 q4...
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Processing Peconic Partners 2022 q1...
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 067901108 (BARRICK GOLD CORP)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ENB-TO"}}}
+$ENB-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['ENB-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 84858T400 (SPINNAKER ETF SERIES)
+$TRP-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TRP-TO']: possibly delisted; no timezone found
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2022 q2...
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 056752108 (BAIDU INC)
+Warning: No ticker found for CUSIP 127686100 (CAESARS ENTERTAINMENT INC NE)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+$ENB-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['ENB-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 84858T400 (SPINNAKER ETF SERIES)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+$TRP-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TRP-TO']: possibly delisted; no timezone found
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2022 q3...
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 845467109 (SOUTHWESTERN ENERGY CO)
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2022 q4...
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 24790A101 (DENBURY INC)
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+$2HQ-HA: possibly delisted; no timezone found
+
+1 Failed download:
+['2HQ-HA']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2021 q1...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 44891N109 (IAC INTERACTIVECORP NEW)
+Warning: No ticker found for CUSIP 845467109 (SOUTHWESTERN ENERGY CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 90184L102 (TWITTER INC)
+Processing Peconic Partners 2021 q2...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 171798101 (CIMAREX ENERGY CO)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 845467109 (SOUTHWESTERN ENERGY CO)
+$2HQ-HA: possibly delisted; no timezone found
+
+1 Failed download:
+['2HQ-HA']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92556H206 (VIACOMCBS INC)
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2021 q3...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 845467109 (SOUTHWESTERN ENERGY CO)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2021 q4...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 03940R107 (ARCH RESOURCES INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 84858T400 (SPINNAKER ETF SERIES)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92719V100 (VIMEO INC)
+Processing Peconic Partners 2020 q1...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+Warning: No ticker found for CUSIP 17273K109 (CIRCOR INTL INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 315405100 (FERRO CORP)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Processing Peconic Partners 2020 q2...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Processing Peconic Partners 2020 q3...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+$GOOS-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['GOOS-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 44891N109 (IAC INTERACTIVECORP NEW)
+$NTR-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['NTR-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Processing Peconic Partners 2020 q4...
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+Warning: No ticker found for CUSIP 212015101 (CONTINENTAL RES INC)
+Warning: No ticker found for CUSIP 22304C100 (COVETRUS INC)
+Warning: No ticker found for CUSIP 23283R100 (CYRUSONE INC)
+Warning: No ticker found for CUSIP 25470m109 (DISH NETWORK CORPORATION)
+Warning: No ticker found for CUSIP 294600101 (EQUITRANS MIDSTREAM CORP)
+Warning: No ticker found for CUSIP 436106108 (HOLLYFRONTIER CORP)
+Warning: No ticker found for CUSIP 44891N109 (IAC INTERACTIVECORP NEW)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Processing Peconic Partners 2019 q1...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+$ACB-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['ACB-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 144577103 (CARRIZO OIL & GAS INC)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 212015101 (CONTINENTAL RESOURCES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 292505104 (ENCANA CORP)
+Warning: No ticker found for CUSIP 428304109 (HEXO CORP)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 64079L105 (NEPTUNE WELLNESS SOLUTIONS I)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+$PAAS-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['PAAS-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 87336U105 (TABLEAU SOFTWARE INC)
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+$WPM-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['WPM-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2019 q2...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 428304109 (HEXO CORP)
+Warning: No ticker found for CUSIP 428337109 (HI CRUSH INC)
+Warning: No ticker found for CUSIP 64079L105 (NEPTUNE WELLNESS SOLUTIONS I)
+$NTR-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['NTR-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+Warning: No ticker found for CUSIP 960908309 (WESTPORT FUEL SYSTEMS INC)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2019 q3...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 00430K402 (ACASTI PHARMA INC)
+Warning: No ticker found for CUSIP 00507V109 (ACTIVISION BLIZZARD INC)
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 124857202 (CBS CORP NEW)
+Warning: No ticker found for CUSIP 36197T103 (GW PHARMACEUTICALS PLC)
+Warning: No ticker found for CUSIP 428337109 (HI CRUSH INC)
+Warning: No ticker found for CUSIP 64079L105 (NEPTUNE WELLNESS SOLUTIONS I)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 92220P105 (VARIAN MED SYS INC)
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+Warning: No ticker found for CUSIP 960908309 (WESTPORT FUEL SYSTEMS INC)
+Processing Peconic Partners 2019 q4...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 00430K402 (ACASTI PHARMA INC)
+Warning: No ticker found for CUSIP 00507V109 (ACTIVISION BLIZZARD INC)
+Warning: No ticker found for CUSIP 01643A207 (ALKALINE WTR CO INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 036642106 (ANTARES PHARMA INC)
+Warning: No ticker found for CUSIP 03765K104 (APHRIA INC)
+Warning: No ticker found for CUSIP 075896100 (BED BATH & BEYOND INC)
+Warning: No ticker found for CUSIP 138035100 (CANOPY GROWTH CORP)
+Warning: No ticker found for CUSIP 17273K109 (CIRCOR INTL INC)
+Warning: No ticker found for CUSIP 428337109 (HI CRUSH INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 701877102 (PARSLEY ENERGY INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92556H206 (VIACOMCBS INC)
+Processing Peconic Partners 2018 q1...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 33938J106 (FLEXION THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 67020Y100 (NUANCE COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68555P100 (ORBCOMM INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 74978Q105 (RSP PERMIAN INC)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 90346E103 (U S SILICA HLDGS INC)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2018 q2...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 33938J106 (FLEXION THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 54142l109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68555P100 (ORBCOMM INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 90346E103 (U S SILICA HLDGS INC)
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+Warning: No ticker found for CUSIP 96812T102 (WILDHORSE RESOURCE DEV CORP)
+Processing Peconic Partners 2018 q3...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 33938J106 (FLEXION THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 535919401 (LIONS GATE ENTMNT CORP)
+Warning: No ticker found for CUSIP 64079L105 (NEPTUNE WELLNESS SOLUTIONS I)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68555P100 (ORBCOMM INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 90346E103 (U S SILICA HLDGS INC)
+Warning: No ticker found for CUSIP 928563402 (VMWARE INC)
+Processing Peconic Partners 2018 q4...
+Warning: No ticker found for CUSIP 00401C108 (ACACIA COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 64079L105 (NEPTUNE WELLNESS SOLUTIONS I)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 848637104 (SPLUNK INC)
+Warning: No ticker found for CUSIP 87336U105 (TABLEAU SOFTWARE INC)
+Warning: No ticker found for CUSIP 90184L102 (TWITTER INC)
+Processing Peconic Partners 2017 q1...
+Warning: No ticker found for CUSIP 008916108 (AGRIUM INC)
+Warning: No ticker found for CUSIP G0177J108 (ALLERGAN PLC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 037411105 (APACHE CORP)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 40537Q605 (HALCON RES CORP)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 48205A109 (JUNO THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 674215108 (OASIS PETE INC NEW)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 69327R101 (PDC ENERGY INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 74978Q105 (RSP PERMIAN INC)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2017 q2...
+Warning: No ticker found for CUSIP 001547108 (AK STL HLDG CORP)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 124857202 (CBS CORP NEW)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 45667G103 (INFINERA CORPORATION)
+Warning: No ticker found for CUSIP 532403201 (LILIS ENERGY INC)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 67020Y100 (NUANCE COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 74978Q105 (RSP PERMIAN INC)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2017 q3...
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+$BEAT: possibly delisted; no price data found  (1d 2017-07-01 -> 2017-10-05) (Yahoo error = "Data doesn't exist for startDate = 1498881600, endDate = 1507176000")
+
+1 Failed download:
+['BEAT']: possibly delisted; no price data found  (1d 2017-07-01 -> 2017-10-05) (Yahoo error = "Data doesn't exist for startDate = 1498881600, endDate = 1507176000")
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 33938J106 (FLEXION THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 48205A109 (JUNO THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 532403201 (LILIS ENERGY INC)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 67020Y100 (NUANCE COMMUNICATIONS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 74978Q105 (RSP PERMIAN INC)
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+Warning: No ticker found for CUSIP 98462Y100 (YAMANA GOLD INC)
+Processing Peconic Partners 2017 q4...
+Warning: No ticker found for CUSIP 008916108 (AGRIUM INC)
+Warning: No ticker found for CUSIP 035290105 (ANIXTER INTL INC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29102H108 (EMERGE ENERGY SVCS LP)
+Warning: No ticker found for CUSIP 33938J106 (FLEXION THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 428337109 (HI CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 48205A109 (JUNO THERAPEUTICS INC)
+Warning: No ticker found for CUSIP 532403201 (LILIS ENERGY INC)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 67020Y100 (NUANCE COMMUNCIATIONS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68555P100 (ORBCOMM INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 748000000 (QUANTA SVCS INC)
+Warning: No ticker found for CUSIP 748000000 (QUANTA SVCS INC)
+Warning: No ticker found for CUSIP 92763M105 (VIPER ENERGY PARTNERS LP)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2016 q1...
+Warning: No ticker found for CUSIP G0177J108 (ALLERGAN PLC)
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 29273R109 (ENERGY TRANSFER PRTNRS L P)
+Warning: No ticker found for CUSIP 31816Q101 (FIREEYE INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 535919203 (LIONS GATE ENTMNT CORP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP G5785G107 (MALLINCKRODT PUB LTD CO)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 847560109 (SPECTRA ENERGY CORP)
+Processing Peconic Partners 2016 q2...
+Warning: No ticker found for CUSIP G0177J108 (ALLERGAN PLC)
+Warning: No ticker found for CUSIP G16962105 (BUNGE LIMITED)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 290846203 (EMCORE CORP)
+Warning: No ticker found for CUSIP 29273R109 (ENERGY TRANSFER PRTNRS L P)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 535919203 (LIONS GATE ENTMNT CORP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP N51488117 (MOBILEYE N V AMSTELVEEN)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 70338P100 (PATTERN ENERGY GROUP INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+Warning: No ticker found for CUSIP 73755L107 (POTASH CORP SASK INC)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 847560109 (SPECTRA ENERGY CORP)
+Warning: No ticker found for CUSIP 87164P103 (SYNERGY RES CORP)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2016 q3...
+Warning: No ticker found for CUSIP 02079K305 (ALPHABET INC)
+Warning: No ticker found for CUSIP 037411105 (APACHE CORP)
+Warning: No ticker found for CUSIP G16962105 (BUNGE LIMITED)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 265504100 (DUNKIN BRANDS GROUP INC)
+Warning: No ticker found for CUSIP 29273R109 (ENERGY TRANSFER PRTNRS L P)
+Warning: No ticker found for CUSIP 350465100 (FOUNDATION MEDICINE INC)
+Warning: No ticker found for CUSIP 402635304 (GULFPORT ENERGY CORP)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Processing Peconic Partners 2016 q4...
+Warning: No ticker found for CUSIP 037411105 (APACHE CORP)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 212015101 (CONTINENTAL RESOURCES INC)
+Warning: No ticker found for CUSIP 350465100 (FOUNDATION MEDICINE INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 651290108 (NEWFIELD EXPL CO)
+Warning: No ticker found for CUSIP 674215108 (OASIS PETE INC NEW)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 69327R101 (PDC ENERGY INC)
+Warning: No ticker found for CUSIP 723787107 (PIONEER NAT RES CO)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$TECK-B-TO: possibly delisted; no timezone found
+
+1 Failed download:
+['TECK-B-TO']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 966387102 (WHITING PETE CORP NEW)
+Warning: No ticker found for CUSIP 98212B103 (WPX ENERGY INC)
+Processing Peconic Partners 2015 q1...
+Warning: No ticker found for CUSIP G0083B108 (ACTAVIS PLC)
+Warning: No ticker found for CUSIP 03822W406 (APPLIED MICRO CIRCUITS CORP)
+Warning: No ticker found for CUSIP 042068106 (ARM HLDGS PLC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 14067d102 (CAPSTONE TURBINE CORP)
+Warning: No ticker found for CUSIP 168615102 (CHICOS FAS INC)
+Warning: No ticker found for CUSIP 171798101 (CIMAREX ENERGY CO)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 292448206 (EMPRESAS ICA S A DE CV)
+Warning: No ticker found for CUSIP 31816Q101 (FIREEYE INC)
+Warning: No ticker found for CUSIP 42210P102 (HEADWATERS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 45667G103 (INFINERA CORPORATION)
+$LH-MX: possibly delisted; no timezone found
+
+1 Failed download:
+['LH-MX']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP N51488117 (MOBILEYE N V AMSTELVEEN)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+Warning: No ticker found for CUSIP 79970Y105 (SANCHEZ ENERGY CORP)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 87164P103 (SYNERGY RES CORP)
+Processing Peconic Partners 2015 q2...
+Warning: No ticker found for CUSIP G0177J108 (ALLERGAN PLC)
+Warning: No ticker found for CUSIP 03822W406 (APPLIED MICRO CIRCUITS CORP)
+Warning: No ticker found for CUSIP 042068106 (ARM HLDGS PLC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 14067d102 (CAPSTONE TURBINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 292448206 (EMPRESAS ICA S A DE CV)
+Warning: No ticker found for CUSIP 31816Q101 (FIREEYE INC)
+Warning: No ticker found for CUSIP 38259P508 (GOOGLE INC)
+Warning: No ticker found for CUSIP 42210P102 (HEADWATERS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 45667G103 (INFINERA CORPORATION)
+$LH-MX: possibly delisted; no timezone found
+
+1 Failed download:
+['LH-MX']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP N51488117 (MOBILEYE N V AMSTELVEEN)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+$0KTF-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KTF-L']: possibly delisted; no timezone found
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Warning: No ticker found for CUSIP 83415T101 (SOLAZYME INC)
+Warning: No ticker found for CUSIP 87164P103 (SYNERGY RES CORP)
+Processing Peconic Partners 2015 q3...
+Warning: No ticker found for CUSIP 03822W406 (APPLIED MICRO CIRCUITS CORP)
+Warning: No ticker found for CUSIP 042068106 (ARM HLDGS PLC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 151290889 (CEMEX SAB DE CV)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 292448206 (EMPRESAS ICA S A DE CV)
+Warning: No ticker found for CUSIP 31816Q101 (FIREEYE INC)
+Warning: No ticker found for CUSIP 42210P102 (HEADWATERS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 45667G103 (INFINERA CORPORATION)
+Warning: No ticker found for CUSIP 535919203 (LIONS GATE ENTMNT CORP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP N51488117 (MOBILEYE N V AMSTELVEEN)
+Warning: No ticker found for CUSIP 64077P108 (NEPTUNE TECHNOLOGIES BIORESO)
+Warning: No ticker found for CUSIP 66987M604 (NOVATEL WIRELESS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Processing Peconic Partners 2015 q4...
+Warning: No ticker found for CUSIP 03822W406 (APPLIED MICRO CIRCUITS CORP)
+Warning: No ticker found for CUSIP 042068106 (ARM HLDGS PLC)
+Warning: No ticker found for CUSIP 131347304 (CALPINE CORP)
+Warning: No ticker found for CUSIP 171798101 (CIMAREX ENERGY CO)
+Warning: No ticker found for CUSIP 20605P101 (CONCHO RES INC)
+Warning: No ticker found for CUSIP 292448206 (EMPRESAS ICA S A DE CV)
+Warning: No ticker found for CUSIP 31816Q101 (FIREEYE INC)
+Warning: No ticker found for CUSIP 42210P102 (HEADWATERS INC)
+Warning: No ticker found for CUSIP 428337109 (HI-CRUSH PARTNERS LP)
+Warning: No ticker found for CUSIP 45667G103 (INFINERA CORPORATION)
+Warning: No ticker found for CUSIP 535919203 (LIONS GATE ENTMNT CORP)
+Warning: No ticker found for CUSIP 54142L109 (LOGMEIN INC)
+Warning: No ticker found for CUSIP 66987M604 (NOVATEL WIRELESS INC)
+Warning: No ticker found for CUSIP 67555N206 (OCLARO INC)
+Warning: No ticker found for CUSIP 68620A104 (ORGANOVO HLDGS INC)
+$0KTF-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KTF-L']: possibly delisted; no timezone found
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0KYZ-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0KYZ-L']: possibly delisted; no timezone found
+$0HEM-L: possibly delisted; no timezone found
+
+1 Failed download:
+['0HEM-L']: possibly delisted; no timezone found
+Done!
