@@ -22,6 +22,24 @@
 			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000105046422000005/peconic_13f06302022.xml",
 			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000105046422000006/Peconic_13f09302022.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000105046423000006/peconic_13f12312022.xml"
+		},
+		"2021": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000117266121001355/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000117266121001831/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000117266121002394/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000105046422000003/peconic_13f12312021.xml"
+		},
+		"2020": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000117266120001371/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000117266120001832/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000117266120002306/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000117266121000791/infotable.xml"
+		},
+		"2019": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000117266119001328/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000117266119001796/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000117266119002258/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000117266120000855/infotable.xml"
 		}
 	}
 }
