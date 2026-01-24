@@ -98,7 +98,14 @@ def get_performance(ticker, start_date, end_date):
         return None
 
 def process_filing(conn, fund_name, year, quarter, url):
-    print(f"Processing {fund_name} {year} {quarter}...")
+    # Check if data already exists
+    cursor = conn.cursor()
+    cursor.execute("SELECT 1 FROM positions WHERE fund_name = ? AND year = ? AND quarter = ? LIMIT 1", (fund_name, int(year), quarter))
+    if cursor.fetchone():
+        print(f"Skipping {fund_name} {year} {quarter} - already exists")
+        return
+
+    print(f"\033[32mProcessing {fund_name} {year} {quarter}...\033[0m")
     
     # Fetch XML
     try:
