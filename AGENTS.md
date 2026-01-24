@@ -39,3 +39,6 @@ CREATE TABLE IF NOT EXISTS positions (
 - It displays a table with analyzed weight percentages and portfolio returns per quarter.
 - It also shows the aggregate annual return based on the manager-weighted performance.
 - Usage: `python3 analyze_fund_annual_performance.py "Fund Name" YEAR`
+
+### `analyze_fund_top20_equal_weight.py`
+- This file calculates the quarter-by-quarter performance of the top 20 stocks in the portfolio equally weighted.

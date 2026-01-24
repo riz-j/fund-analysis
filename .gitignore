@@ -1,2 +1,4 @@
 PROMPT.md
 funds.db
+__pycache__/
+.env

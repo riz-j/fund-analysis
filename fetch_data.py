@@ -12,7 +12,7 @@ DB_FILE = 'funds.db'
 SCHEMA_FILE = 'schema.sql'
 FILINGS_FILE = 'filings.json'
 USER_AGENT_SEC = "FundAnalysisTool/1.0 (contact@example.com)"
-USER_AGENT_YAHOO = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+FMP_API_KEY = "OG4bS3dBtIRH7XiH7n2Pu5QODviIT5rP"
 
 # Caching
 cusip_cache = {}
@@ -25,27 +25,112 @@ def init_db():
     conn.commit()
     return conn
 
-def get_ticker_from_cusip(cusip):
+def get_ticker_from_name(name):
+    if not name or name == "Unknown":
+        return None
+        
+    url = f"https://financialmodelingprep.com/stable/search-name?query={name}&apikey={FMP_API_KEY}"
+    
+    for attempt in range(5):
+        try:
+            time.sleep(0.25)
+            response = requests.get(url)
+            
+            if response.status_code == 429:
+                wait = 2 ** attempt
+                print(f"429 Too Many Requests. Retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+                
+            if response.status_code == 200:
+                data = response.json()
+                if not data:
+                    return None
+                    
+                # Filter for US exchanges and USD
+                valid_exchanges = {'NYSE', 'NASDAQ', 'AMEX'}
+                candidates = []
+                
+                for item in data:
+                    if item.get('currency') == 'USD' and item.get('exchange') in valid_exchanges:
+                        candidates.append(item)
+                
+                if not candidates:
+                    return None
+                
+                # Scoring function
+                def score_candidate(item):
+                    s_name = name.upper()
+                    i_name = item['name'].upper()
+                    
+                    score = 0
+                    if i_name == s_name:
+                        score = 100
+                    elif i_name.startswith(s_name):
+                        score = 50
+                    elif s_name in i_name:
+                        score = 10
+                    
+                    # Tie-breaker: Shortest symbol preferred (User specifies "only one is the real one")
+                    # We invert length so we can reverse sort
+                    # But Python sort is stable. simpler is to return tuple.
+                    return (score, -len(item['symbol']))
+
+                # Sort by score (desc) then symbol length (asc -> negative len desc)
+                candidates.sort(key=score_candidate, reverse=True)
+                
+                ticker = candidates[0]['symbol']
+                
+                # Clean ticker
+                ticker = ticker.replace('.', '-')
+                return ticker
+                
+        except Exception as e:
+            print(f"Error fetching ticker for name {name}: {e}")
+            time.sleep(1)
+            
+    return None
+
+def get_ticker_from_cusip(cusip, name=None):
     if cusip in cusip_cache:
         return cusip_cache[cusip]
     
-    url = f"https://query2.finance.yahoo.com/v1/finance/search?q={cusip}"
-    headers = {'User-Agent': USER_AGENT_YAHOO}
+    url = f"https://financialmodelingprep.com/stable/search-cusip?cusip={cusip}&apikey={FMP_API_KEY}"
     
-    try:
-        # Rate limit kindness
-        time.sleep(0.5)
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            data = response.json()
-            if 'quotes' in data and len(data['quotes']) > 0:
-                ticker = data['quotes'][0]['symbol']
-                # Clean ticker (replace '.' with '-' for yfinance if needed, though yf handles dots often? usually BRK.B -> BRK-B)
-                ticker = ticker.replace('.', '-')
-                cusip_cache[cusip] = ticker
-                return ticker
-    except Exception as e:
-        print(f"Error fetching ticker for CUSIP {cusip}: {e}")
+    # Rate limit handling (max 300/min -> 1 call every 0.2s)
+    # We use 0.25s to be safe
+    for attempt in range(5):
+        try:
+            time.sleep(0.25)
+            response = requests.get(url)
+            
+            if response.status_code == 429:
+                wait = 2 ** attempt
+                print(f"429 Too Many Requests for {cusip}. Retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+                
+            if response.status_code == 200:
+                data = response.json()
+                if data and len(data) > 0:
+                    ticker = data[0]['symbol']
+                    # Clean ticker (replace '.' with '-' for yfinance if needed, though yf handles dots often? usually BRK.B -> BRK-B)
+                    ticker = ticker.replace('.', '-')
+                    cusip_cache[cusip] = ticker
+                    return ticker
+                    
+                # Fallback to name search if CUSIP failed
+                if name:
+                    print(f"Propagating to name search for {name} (CUSIP {cusip} failed)")
+                    ticker = get_ticker_from_name(name)
+                    if ticker:
+                         cusip_cache[cusip] = ticker # Cache it against the CUSIP too
+                         return ticker
+                         
+                return None
+        except Exception as e:
+            print(f"Error fetching ticker for CUSIP {cusip}: {e}")
+            time.sleep(1)
     
     return None
 
@@ -183,8 +268,14 @@ def process_filing(conn, fund_name, year, quarter, url):
     # Process positions
     start_date, end_date = get_quarter_dates(year, quarter)
     
+    # Sort by value descending and keep top 30
+    positions.sort(key=lambda x: x['value'], reverse=True)
+
+    # Limit to top 30 positions
+    positions = positions[:30]
+    
     for pos in positions:
-        ticker = get_ticker_from_cusip(pos['cusip'])
+        ticker = get_ticker_from_cusip(pos['cusip'], pos['name'])
         if not ticker:
             print(f"Warning: No ticker found for CUSIP {pos['cusip']} ({pos['name']})")
             ticker = "UNKNOWN-" + pos['cusip'] # Fallback
