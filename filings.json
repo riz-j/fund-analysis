@@ -64,6 +64,12 @@
 			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000116469115000135/peconicq22015.inftab.xml",
 			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000116469115000174/peconicq32015.inftab.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000116469116000237/peconicq42015.inftab.xml"
+		},
+		"2014": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000118/peconicq12014.inftab.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000178/peconicq22014.inftab.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000212/peconicq32014.inftab.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000116469115000029/peconicq42014.inftab.xml"
 		}
 	},
 	"donald-smith": {
