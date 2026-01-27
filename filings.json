@@ -137,6 +137,17 @@
 			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437515000036/13finfortable2Q15A.xml",
 			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000032/13finfortable3Q15revised.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437517000033/13finfortable4Q15revised.xml"
+		},
+		"2014": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437514000044/13finfortable1Q14A.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437514000047/13finfortable2Q14A.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437514000048/13finfortable3Q14A.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437515000002/13finfortable4Q14A.xml"
+		},
+		"2013": {
+			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437513000043/13finfortable2Q13b.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437513000046/13finfortable3Q13a.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437514000005/13finfortable4Q13A.xml"
 		}
 	},
 	"jeffrey-gendell": {
