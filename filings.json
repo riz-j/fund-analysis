@@ -70,6 +70,11 @@
 			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000178/peconicq22014.inftab.xml",
 			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000212/peconicq32014.inftab.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000116469115000029/peconicq42014.inftab.xml"
+		},
+		"2013": {
+			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000116469113000101/peconicdraftnew.inftab.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000116469113000136/peconicdraftnewq3.inftab.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000116469114000023/peconicq42013.inftab.xml"
 		}
 	},
 	"donald-smith": {
@@ -174,6 +179,41 @@
 			"q2": "https://www.sec.gov/Archives/edgar/data/1056581/000090266415003476/infotable.xml",
 			"q3": "https://www.sec.gov/Archives/edgar/data/1056581/000090266415004209/infotable.xml",
 			"q4": "https://www.sec.gov/Archives/edgar/data/1056581/000090266416005665/infotable.xml"
+		}
+	},
+	"fenghe": {
+		"2025": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1660531/000117266125001720/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1660531/000117266125002651/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1660531/000117266125004417/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266126000399/infotable.xml"
+		},
+		"2024": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1660531/000117266124002173/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1660531/000117266124002932/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1660531/000117266124004502/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266125000440/infotable.xml"
+		},
+		"2023": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1660531/000117266123001738/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1660531/000117266123002719/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1660531/000117266123003450/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266124000296/infotable.xml"
+		},
+		"2022": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1660531/000117266122001172/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1660531/000117266122001889/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1660531/000117266122002286/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266123000326/infotable.xml"
+		},
+		"2021": {
+			"q1": "https://www.sec.gov/Archives/edgar/data/1660531/000117266121001030/infotable.xml",
+			"q2": "https://www.sec.gov/Archives/edgar/data/1660531/000117266121001719/infotable.xml",
+			"q3": "https://www.sec.gov/Archives/edgar/data/1660531/000117266121002100/infotable.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266122000593/infotable.xml"
+		},
+		"2020": {
+			"q4": "https://www.sec.gov/Archives/edgar/data/1660531/000117266121000229/infotable.xml"
 		}
 	}
 }
