@@ -81,7 +81,8 @@
 		"2025": {
 			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000019/13finfotable1Q25.xml",
 			"q2": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000046/13finfotable2Q25.xml",
-			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000078/13finfotable3Q25.xml"
+			"q3": "https://www.sec.gov/Archives/edgar/data/814375/000081437525000078/13finfotable3Q25.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/814375/000081437526000013/13finfotable4Q25.xml"
 		},
 		"2024": {
 			"q1": "https://www.sec.gov/Archives/edgar/data/814375/000081437524000014/13finfotable1Q24.xml",
