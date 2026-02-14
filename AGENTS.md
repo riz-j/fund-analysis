@@ -42,3 +42,6 @@ CREATE TABLE IF NOT EXISTS positions (
 
 ### `analyze_fund_top20_equal_weight.py`
 - This file calculates the quarter-by-quarter performance of the top 20 stocks in the portfolio equally weighted.
+
+### `sp500_quarterly_performance.csv`
+- This file contains the performance of the sp500 quarter-to-quarter from 2020 Q1 to 2025 Q4.
