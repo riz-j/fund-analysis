@@ -3,7 +3,8 @@
 		"2025": {
 			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000185520525000032/peconic_13f03312025.xml",
 			"q2": "https://www.sec.gov/Archives/edgar/data/1050464/000185520525000058/peconic_13f06302025.xml",
-			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000105046425000005/peconic_13f09302025.xml"
+			"q3": "https://www.sec.gov/Archives/edgar/data/1050464/000105046425000005/peconic_13f09302025.xml",
+			"q4": "https://www.sec.gov/Archives/edgar/data/1050464/000105046426000002/peconic_13f12312025.xml"
 		},
 		"2024": {
 			"q1": "https://www.sec.gov/Archives/edgar/data/1050464/000185520524000026/peconic_13f03312024.xml",
