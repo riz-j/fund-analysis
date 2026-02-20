@@ -82,7 +82,7 @@ def get_ticker_from_name(name):
                 ticker = candidates[0]['symbol']
                 
                 # Clean ticker
-                ticker = ticker.replace('.', '-')
+                ticker = ticker.replace('-', '.')
                 return ticker
                 
         except Exception as e:
@@ -114,8 +114,8 @@ def get_ticker_from_cusip(cusip, name=None):
                 data = response.json()
                 if data and len(data) > 0:
                     ticker = data[0]['symbol']
-                    # Clean ticker (replace '.' with '-' for yfinance if needed, though yf handles dots often? usually BRK.B -> BRK-B)
-                    ticker = ticker.replace('.', '-')
+                    # Clean ticker (replace '-' with '.' for yfinance)
+                    ticker = ticker.replace('-', '.')
                     cusip_cache[cusip] = ticker
                     return ticker
                     
