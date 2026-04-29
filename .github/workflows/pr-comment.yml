@@ -1,0 +1,29 @@
+name: Hello World PR Comment
+
+# This tells GitHub WHEN to run the action
+on:
+  pull_request:
+    # 'opened' triggers when the PR is first created
+    # 'synchronize' triggers whenever a new commit is pushed to the PR branch
+    types: [opened, synchronize]
+
+# This defines WHAT the action will do
+jobs:
+  leave_comment:
+    runs-on: ubuntu-latest
+    
+    # We need permission to write comments on pull requests
+    permissions:
+      pull-requests: write 
+
+    steps:
+      - name: Post "Hello World!" comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Hello World!'
+            })
