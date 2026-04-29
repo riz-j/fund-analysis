@@ -2,57 +2,31 @@ name: Drop Approvals on Large Commits
 
 on:
   pull_request:
-    types: [synchronize] # Only runs when new commits are pushed to the PR branch
+    types: [synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  check-and-dismiss:
+  drop-approvals:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write # Required to dismiss PR reviews
-      contents: read       # Required to checkout the code
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetches all history so we can compare the old and new commit SHAs
-
-      - name: Check commit size and dismiss approvals
+      - name: Dismiss approvals after large pushes
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          BEFORE_SHA: ${{ github.event.before }}
-          AFTER_SHA: ${{ github.event.after }}
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
         run: |
-          # 1. Calculate total lines changed (additions + deletions) in the new push
-          LINES_CHANGED=$(git diff --numstat $BEFORE_SHA $AFTER_SHA | awk '{s+=$1+$2} END {print s}')
-          
-          # Handle empty output if there are no text changes (e.g., file permission changes)
-          LINES_CHANGED=${LINES_CHANGED:-0}
-          
-          echo "Lines changed in this push: $LINES_CHANGED"
+          lines=$(gh api "/repos/$GITHUB_REPOSITORY/compare/$BEFORE...$AFTER" --jq '[.files[].changes] | add // 0')
+          echo "Lines changed in this push: $lines"
 
-          # 2. Check if the lines changed are 3 or more
-          if [ "$LINES_CHANGED" -ge 3 ]; then
-            echo "Change is >= 3 lines. Checking for approvals to dismiss..."
+          [ "$lines" -lt 3 ] && exit 0
 
-            # 3. Get all approved review IDs for this PR using the GitHub CLI
-            REVIEWS=$(gh api repos/${{ github.repository }}/pulls/$PR_NUMBER/reviews \
-              --jq '.[] | select(.state == "APPROVED") | .id')
-
-            if [ -z "$REVIEWS" ]; then
-              echo "No approved reviews found. Nothing to dismiss."
-            else
-              # 4. Loop through each approved review and dismiss it
-              for REVIEW_ID in $REVIEWS; do
-                echo "Dismissing review ID: $REVIEW_ID"
-                gh api \
-                  --method PUT \
-                  -H "Accept: application/vnd.github+json" \
-                  /repos/${{ github.repository }}/pulls/$PR_NUMBER/reviews/$REVIEW_ID/dismissals \
-                  -f message="Automatically dismissed: New push contained 3 or more lines of changes."
-              done
-            fi
-          else
-            echo "Change is strictly less than 3 lines. Keeping current approvals intact."
-          fi
+          gh api "/repos/$GITHUB_REPOSITORY/pulls/$PR/reviews" --jq '.[] | select(.state == "APPROVED") | .id' |
+            while read -r review; do
+              gh api --method PUT \
+                "/repos/$GITHUB_REPOSITORY/pulls/$PR/reviews/$review/dismissals" \
+                -f message="Automatically dismissed: new push contained 3 or more lines of changes."
+            done
