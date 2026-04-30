@@ -1,29 +1,33 @@
-name: Hello World PR Comment
+name: PR Joke Comment
 
-# This tells GitHub WHEN to run the action
 on:
   pull_request:
-    # 'opened' triggers when the PR is first created
-    # 'synchronize' triggers whenever a new commit is pushed to the PR branch
     types: [opened, synchronize]
 
-# This defines WHAT the action will do
 jobs:
   leave_comment:
     runs-on: ubuntu-latest
-    
-    # We need permission to write comments on pull requests
     permissions:
-      pull-requests: write 
+      contents: read
+      issues: write
+      pull-requests: write
 
     steps:
-      - name: Post "Hello World!" comment
-        uses: actions/github-script@v7
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Hello World!'
-            })
+          python-version: '3.11'
+
+      - name: Install workflow dependencies
+        run: python -m pip install --upgrade pip litellm
+
+      - name: Post corny joke comment
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python .github/scripts/post_pr_joke.py
