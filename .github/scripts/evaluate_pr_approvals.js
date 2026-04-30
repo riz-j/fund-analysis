@@ -132,12 +132,13 @@ const dropApprovals = async (state) => {
 
 	const reviews = reviewsData
 		.filter((review) => review.state === "APPROVED");
+	const dismissalMessage = justification || "Approvals dismissed because the latest commit changed more than 50 lines.";
 		
 	for (const review of reviews) {
 		await client.put(
 			`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews/${review.id}/dismissals`,
 			{
-				message: justification,
+				message: dismissalMessage,
 			}
 		);
 	}
