@@ -12,21 +12,16 @@ jobs:
   drop-approvals:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Dismiss approvals after large pushes
         env:
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.event.after }}
-        run: |
-          lines=$(gh api "/repos/$GITHUB_REPOSITORY/compare/$BEFORE...$AFTER" --jq '[.files[].changes] | add // 0')
-          echo "Lines changed in this push: $lines"
-
-          [ "$lines" -lt 3 ] && exit 0
-
-          gh api "/repos/$GITHUB_REPOSITORY/pulls/$PR/reviews" --jq '.[] | select(.state == "APPROVED") | .id' |
-            while read -r review; do
-              gh api --method PUT \
-                "/repos/$GITHUB_REPOSITORY/pulls/$PR/reviews/$review/dismissals" \
-                -f message="Automatically dismissed: new push contained 3 or more lines of changes."
-            done
+        run: bun .github/scripts/drop_approvals.ts
