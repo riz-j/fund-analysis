@@ -30,23 +30,34 @@ const fetchPrData = async (state) => {
 	const { data: pullRequest } = await client.get(
 		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}`,
 	);
+	const { data: reviews } = await client.get(
+		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews`,
+	);
 	const commitId = commits.at(-1).sha;
 
 	const { data: commitDetails } = await client.get(
 		`https://api.github.com/repos/${githubRespository}/commits/${commitId}`,
 	);
+	const message = commitDetails.commit.message;
 	const linesChanged = commitDetails.stats.additions + commitDetails.stats.deletions;
 	const diff = commitDetails.files
 		.map(file => `--- a/${file.filename}\n+++ b/${file.filename}\n${file.patch ?? ""}`)
 		.join("\n");
+
+	const numberOfApprovals = reviews
+		.filter(review => review.state === "APPROVED")
+		.length;
+
 
 	return {
 		commitData: {
 			commitId,
 			linesChanged,
 			diff,
+			message,
 		},
 		pullRequestData: {
+			numberOfApprovals,
 			isDraft: pullRequest.draft,
 		},
 	};
@@ -55,6 +66,10 @@ const fetchPrData = async (state) => {
 /** @conditional_edge */
 const routeWorkflow = (state) => {
 	if (state.pullRequestData.isDraft) {
+		return "beforeEnd";
+	}
+
+	if (state.pullRequestData.numberOfApprovals === 0) {
 		return "beforeEnd";
 	}
 
@@ -163,9 +178,11 @@ const GraphStateSchema = z.object({
 	commitData: z.object({
 		commitId: z.string().min(1),
 		linesChanged: z.number().int().nonnegative(),
-		diff: z.string().min(1),
+		diff: z.string().optional(),
+		message: z.string().optional(),
 	}).optional(),
 	pullRequestData: z.object({
+		numberOfApprovals: z.number().int().nonnegative(),
 		isDraft: z.boolean(),
 	}).optional(),
 }); 
