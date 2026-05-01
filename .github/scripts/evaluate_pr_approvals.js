@@ -107,7 +107,13 @@ const decideOutcome = async (state) => {
 			Take heed of the file type. For example, changes to .md files are unlikely to change behavior compared to .cfm files.
 			Decide based on the following commit diff:
 		` },
-		{ role: "user", content: state.commitData.diff },
+		{ role: "user", content: `
+			# Commit Message:
+			${state.commitData.message}
+
+			# Diff:
+			${state.commitData.diff}	
+		` },
 	]);
 
 	return {
