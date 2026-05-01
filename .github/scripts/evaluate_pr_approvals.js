@@ -48,7 +48,6 @@ const fetchPrData = async (state) => {
 		.filter(review => review.state === "APPROVED")
 		.length;
 
-
 	return {
 		commitData: {
 			commitId,
