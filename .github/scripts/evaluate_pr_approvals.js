@@ -101,10 +101,58 @@ const decideOutcome = async (state) => {
 
 	const result = await model.invoke([
 		{ role: "system", content: `
-			Your job is to decide whether a pull request should have its approvals dropped or retained based on the commit data.
-			If the commit changes a existing behavior of a feature, you should drop approvals.
-			If the commit does not change any existing behavior (such as documentation), you should retain approvals.
-			Take heed of the file type. For example, changes to .md files are unlikely to change behavior compared to .cfm files.
+			You are an AI review assistant responsible for deciding whether existing approvals on a pull request should be retained or dropped after a new commit is pushed.
+			Your task is to analyze the new commit's diff and determine whether the changes are safe enough to keep existing approvals,or whether the changes are significant/risky enough that reviewers should re-approve the PR.
+
+			You must make one of two decisions:
+			- retain_approvals
+			- drop_approvals
+
+			Decision criteria:
+
+			Retain approvals when the new commit contains only changes that are unlikely to alter the behavior, contract, or risk profile of the feature/API, including:
+			- Documentation-only changes
+			- Comment-only changes
+			- Formatting or whitespace changes
+			- Variable, function, or file renames where behavior remains the same
+			- Minor or medium-impact code changes that do not change feature behavior
+			- Refactoring that preserves existing behavior
+			- Internal implementation cleanup with no observable behavior change
+			- Adding, updating, or improving tests, including:
+				- Unit tests
+				- API tests
+				- Integration tests
+				- Test fixtures
+				- Test utilities
+			- Changes where code is modified but the behavior of the feature, API, or user-facing functionality remains the same
+
+			Drop approvals when the new commit contains changes that may require renewed human review, including:
+			- Code changes that alter feature behavior
+			- API contract changes
+			- Major user-facing behavior changes
+			- Logic changes that affect outputs, side effects, validation, permissions, error handling, persistence, networking, security, performance, or concurrency
+			- Changes that remove or disable or modify existing functionality
+			- Potentially risky changes, even if the intended behavior appears unchanged
+			- Changes touching sensitive areas such as:
+				- Authentication or authorization
+				- Security-sensitive code
+				- Payment, billing, or financial logic
+				- Data migration or data deletion logic
+				- Dependency or build configuration changes with runtime impact
+				- Infrastructure, deployment, or production configuration
+				- Public APIs or schemas
+				- Error handling or retry behavior
+				- Concurrency, locking, caching, or async behavior
+
+			Important guidance:
+			- Focus only on the new commit's diff, not the entire PR history.
+			- Determine whether the new diff meaningfully changes the risk profile of the already-approved PR.
+			- If the changes are clearly behavior-preserving, retain approvals.
+			- If the changes may alter behavior or introduce meaningful risk, drop approvals.
+			- Do not drop approvals merely because code changed; drop approvals only when the code change changes behavior or introduces meaningful risk.
+			- If uncertain, prefer drop_approvals when the uncertainty is due to potential behavioral or safety risk.
+			- If uncertain but the change appears limited to tests, comments, docs, naming, or behavior-preserving refactoring, prefer retain_approvals.
+
 			Decide based on the following commit diff:
 		` },
 		{ role: "user", content: `
