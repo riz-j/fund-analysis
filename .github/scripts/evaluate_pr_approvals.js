@@ -73,8 +73,8 @@ const routeWorkflow = (state) => {
 		return "beforeEnd";
 	}
 
-	if (state.commitData.linesChanged > 50) {
-		state.justification = "Approvals dismissed because the latest commit changed more than 50 lines.";
+	if (state.commitData.linesChanged > 100) {
+		state.justification = "Approvals dismissed because the latest commit changed more than 100 lines.";
 		return "dropApprovals";
 	}
 
