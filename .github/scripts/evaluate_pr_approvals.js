@@ -65,11 +65,13 @@ const fetchPrData = async (state) => {
 /** @conditional_edge */
 const routeWorkflow = (state) => {
 	if (state.pullRequestData.isDraft) {
-		return "beforeEnd";
+		state.justification = "Approvals retained because the pull request is still a draft.";
+		return "retainApprovals";
 	}
 
 	if (state.pullRequestData.numberOfApprovals === 0) {
-		return "beforeEnd";
+		state.justification = "Approvals retained because there are no existing approvals to drop.";
+		return "retainApprovals";
 	}
 
 	if (state.commitData.linesChanged > 100) {
@@ -266,7 +268,7 @@ const graph = new StateGraph(GraphState, {
 	.addConditionalEdges("fetchPrData", routeWorkflow, {
 		decideOutcome: "decideOutcome",
 		dropApprovals: "dropApprovals",
-		beforeEnd: "beforeEnd",
+		retainApprovals: "retainApprovals",
 	})
 	.addConditionalEdges("decideOutcome", routeAnalyzeDecision, {
 		dropApprovals: "dropApprovals",
