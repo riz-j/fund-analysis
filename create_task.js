@@ -10,11 +10,13 @@ const createTask = async (state) => {
 		filesChanged: prFilesChanged,
 	});
 
-
-	application.clientFactory.getTaskClient().createTask(
+	const taskId = application.clientFactory.getTaskClient().createTask(
 		state.controllingOrg,
 		input
 	);
 
-	return { created: true };
+	return {
+		created: true,
+		taskId,
+	};
 }
