@@ -203,11 +203,14 @@ const dropApprovals = async (state) => {
 
 	const reviews = reviewsData
 		.filter((review) => review.state === "APPROVED");
+
+	const dismissalMessage = justification
+		|| "Approvals automatically dismissed.";
 		
 	for (const review of reviews) {
 		await client.put(
 			`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews/${review.id}/dismissals`,
-			{ message: justification }
+			{ message: dismissalMessage, event: "DISMISS" },
 		);
 	}
 }
