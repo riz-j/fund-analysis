@@ -20,3 +20,5 @@ const createTask = async (state) => {
 		taskId,
 	};
 }
+
+export default createTask;
