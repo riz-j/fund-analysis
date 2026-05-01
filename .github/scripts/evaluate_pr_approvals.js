@@ -33,7 +33,7 @@ const fetchPrData = async (state) => {
 	const { data: reviews } = await client.get(
 		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews`,
 	);
-	const commitId = commits.at(-1).sha;
+	const commitId = pullRequest.head.sha;
 
 	const { data: commitDetails } = await client.get(
 		`https://api.github.com/repos/${githubRespository}/commits/${commitId}`,
