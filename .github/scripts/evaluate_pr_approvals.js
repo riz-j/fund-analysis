@@ -24,9 +24,6 @@ const fetchPrData = async (state) => {
 		},
 	});
 
-	const { data: commits } = await client.get(
-		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/commits`,
-	);
 	const { data: pullRequest } = await client.get(
 		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}`,
 	);
