@@ -62,22 +62,18 @@ const fetchPrData = async (state) => {
 /** @conditional_edge */
 const routeWorkflow = (state) => {
 	if (state.pullRequestData.isDraft) {
-		state.justification = "Approvals retained because the pull request is still a draft.";
 		return "retainApprovals";
 	}
 
 	if (state.pullRequestData.numberOfApprovals === 0) {
-		state.justification = "Approvals retained because there are no existing approvals to drop.";
 		return "retainApprovals";
 	}
 
 	if (/merge branch.*(master|main)/i.test(state.commitData.message.trim())) {
-		state.justification = "Approvals retained because the latest commit is a merge from the master branch.";
 		return "retainApprovals";
 	}
 
 	if (state.commitData.linesChanged > 100) {
-		state.justification = "Approvals dismissed because the latest commit changed more than 100 lines.";
 		return "dropApprovals";
 	}
 
