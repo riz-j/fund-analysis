@@ -1,4 +1,4 @@
-name: Retain Approvals
+name: PR Approval Retention
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  retain-approvals:
+  pr-approval-retention:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,10 +21,10 @@ jobs:
       - name: Install script dependencies
         run: bun add @langchain/langgraph @langchain/openrouter axios zod
 
-      - name: Run retain approvals script
+      - name: Run PR approval retention script
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: bun .github/scripts/evaluate_pr_approvals.js
+        run: bun .github/scripts/pr-approval-retention.script.js
