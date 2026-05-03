@@ -12,7 +12,7 @@ const beforeStart = (state) => {
 const fetchPrData = async (state) => {
 	const {
 		githubToken,
-		githubRespository,
+		githubRepository,
 		githubPrNumber,
 	} = state;
 
@@ -25,15 +25,15 @@ const fetchPrData = async (state) => {
 	});
 
 	const { data: pullRequest } = await client.get(
-		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}`,
+		`https://api.github.com/repos/${githubRepository}/pulls/${githubPrNumber}`,
 	);
 	const { data: reviews } = await client.get(
-		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews`,
+		`https://api.github.com/repos/${githubRepository}/pulls/${githubPrNumber}/reviews`,
 	);
 	const commitId = pullRequest.head.sha;
 
 	const { data: commitDetails } = await client.get(
-		`https://api.github.com/repos/${githubRespository}/commits/${commitId}`,
+		`https://api.github.com/repos/${githubRepository}/commits/${commitId}`,
 	);
 	const message = commitDetails.commit.message;
 	const linesChanged = commitDetails.stats.additions + commitDetails.stats.deletions;
@@ -163,7 +163,7 @@ const routeAnalyzeDecision = (state) => {
 const dropApprovals = async (state) => {
 	const {
 		githubToken,
-		githubRespository,
+		githubRepository,
 		githubPrNumber,
 		justification,
 	} = state;
@@ -177,7 +177,7 @@ const dropApprovals = async (state) => {
 	});
 
 	const { data: reviewsData } = await client.get(
-		`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews`,
+		`https://api.github.com/repos/${githubRepository}/pulls/${githubPrNumber}/reviews`,
 	);
 
 	const reviews = reviewsData
@@ -188,7 +188,7 @@ const dropApprovals = async (state) => {
 		
 	for (const review of reviews) {
 		await client.put(
-			`https://api.github.com/repos/${githubRespository}/pulls/${githubPrNumber}/reviews/${review.id}/dismissals`,
+			`https://api.github.com/repos/${githubRepository}/pulls/${githubPrNumber}/reviews/${review.id}/dismissals`,
 			{ message: dismissalMessage, event: "DISMISS" },
 		);
 	}
@@ -206,7 +206,7 @@ const beforeEnd = (state) => {
 
 const GraphStateSchema = z.object({
 	githubToken: z.string().min(1),
-	githubRespository: z.string().min(1),
+	githubRepository: z.string().min(1),
 	githubPrNumber: z.number().int().positive(),
 	openrouterApiKey: z.string().min(1),
 
@@ -226,7 +226,7 @@ const GraphStateSchema = z.object({
 
 const GraphState = Annotation.Root({
 	githubToken: Annotation(),
-	githubRespository: Annotation(),
+	githubRepository: Annotation(),
 	githubPrNumber: Annotation(),
 	openrouterApiKey: Annotation(),
 
@@ -264,7 +264,7 @@ const app = graph.compile();
 
 const result = await app.invoke({
 	githubToken: process.env.GITHUB_TOKEN,
-	githubRespository: process.env.GITHUB_REPOSITORY,
+	githubRepository: process.env.GITHUB_REPOSITORY,
 	githubPrNumber: Number(process.env.GITHUB_PR_NUMBER),
 	openrouterApiKey: process.env.OPENROUTER_API_KEY,
 });
