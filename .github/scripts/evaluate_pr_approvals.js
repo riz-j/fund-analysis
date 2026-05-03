@@ -121,10 +121,10 @@ const decideOutcome = async (state) => {
 			- Significant feature logic changes
 			- Risky changes in security, auth, billing, data deletion, migrations, concurrency, or production config
 			- Changes likely to cause regressions
-			- Unclear changes with meaningful behavioral risk
 
 			Do not drop approvals just because code changed.
 			Do not drop approvals for low-risk additive changes.
+			If the risk is not substantial, then retain approvals.
 
 			Decide based on the following commit diff:
 		` },
