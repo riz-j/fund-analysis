@@ -15,8 +15,8 @@ const createTask = async (state) => {
 		filesChanged: prFilesChanged,
 	});
 
-	const taskClient = new TaskClient();
-	const taskId = taskClient.createTask(
+	const tc = new TaskClient();
+	const taskId = tc.createTask(
 		state.controllingOrg,
 		input
 	);
