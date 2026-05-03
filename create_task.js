@@ -15,16 +15,25 @@ const createTask = async (state) => {
 		filesChanged: prFilesChanged,
 	});
 
-	const tc = new TaskClient();
-	const taskId = tc.createTask(
-		state.controllingOrg,
-		input
-	);
+	try {
+		const tc = new TaskClient();
+		const taskId = tc.createTask(
+			state.controllingOrg,
+			input
+		);
+	
+		return {
+			created: true,
+			taskId,
+		};
 
-	return {
-		created: true,
-		taskId,
-	};
+	} catch (error) {
+		return {
+			created: false,
+			error: error.message,
+		};
+	}
+
 }
 
 export default createTask;
