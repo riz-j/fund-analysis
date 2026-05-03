@@ -116,6 +116,7 @@ const decideOutcome = async (state) => {
 			- Refactors or internal implementation changes
 			- Localized code changes where inputs, outputs, API behavior, and side effects appear unchanged
 			- Additive changes that do not affect existing behavior
+			- Defensive error handling, logging, or observability improvements
 			- Dependency, construction, wiring, or plumbing changes where no concrete behavior change is visible
 			- Changes where the concern is speculative or based on hidden behavior not shown in the diff
 
