@@ -130,7 +130,6 @@ const decideOutcome = async (state) => {
 			- Breaking API or user-facing behavior changes
 			- Significant feature logic changes
 			- Changes to security, auth, permissions, billing, data deletion, migrations, concurrency, or production config
-			- Changed inputs, outputs, side effects, error handling, persistence, external calls, or control flow in a way likely to affect behavior
 			- Changes likely to cause regressions
 
 			Decide based on the following commit diff:
