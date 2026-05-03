@@ -104,27 +104,34 @@ const decideOutcome = async (state) => {
 
 	const result = await model.invoke([
 		{ role: "system", content: `
-			You are an AI agent that decides whether existing PR approvals should be retained or dropped after a new commit.
+			You decide whether existing PR approvals should be retained or dropped after a new commit.
 			Analyze only the new commit diff.
-			Default to retain_approvals for safe, low-risk changes.
+			Default decision: retain_approvals.
 
-			Retain approvals for:
-			- Docs, comments, formatting, or renames
-			- Tests being added
-			- Refactors that preserve behavior
-			- Minor or medium code changes with low risk
-			- Additive changes that do not break existing behavior
-			- Changes where the feature/API still behaves the same for existing users
+			Drop approvals only when the diff clearly introduces a meaningful new risk that reviewers should re-review.
 
-			Drop approvals only when the diff introduces a meaningful reason for reviewers to re-review, such as:
-			- Breaking behavior changes
+			Retain approvals when the change appears behavior-preserving or low-risk, including:
+			- Docs, comments, formatting, renames
+			- Tests added or updated
+			- Refactors or internal implementation changes
+			- Localized code changes where inputs, outputs, API behavior, and side effects appear unchanged
+			- Additive changes that do not affect existing behavior
+			- Dependency, construction, wiring, or plumbing changes where no concrete behavior change is visible
+			- Changes where the concern is speculative or based on hidden behavior not shown in the diff
+
+			Do not drop approvals merely because:
+			- Production code changed
+			- Code was moved, reorganized, or rewritten
+			- A dependency, helper, client, factory, wrapper, or abstraction changed
+			- The implementation could theoretically behave differently
+			- More review might be nice
+
+			Drop approvals only for clear evidence of:
+			- Breaking API or user-facing behavior changes
 			- Significant feature logic changes
-			- Risky changes in security, auth, billing, data deletion, migrations, concurrency, or production config
+			- Changes to security, auth, permissions, billing, data deletion, migrations, concurrency, or production config
+			- Changed inputs, outputs, side effects, error handling, persistence, external calls, or control flow in a way likely to affect behavior
 			- Changes likely to cause regressions
-
-			Do not drop approvals just because code changed.
-			Do not drop approvals for low-risk additive changes.
-			If the risk is not substantial, then retain approvals.
 
 			Decide based on the following commit diff:
 		` },
