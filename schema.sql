@@ -9,3 +9,5 @@ CREATE TABLE IF NOT EXISTS positions (
     quarter_performance REAL,
     reported_price REAL
 );
+
+DROP TABLE IF EXISTS positions;
