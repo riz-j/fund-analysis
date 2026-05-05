@@ -83,7 +83,7 @@ const routeWorkflow = (state) => {
 /** @node */
 const decideOutcome = async (state) => {
 	const model = new ChatBedrockConverse({
-		model: "openai.gpt-oss-120b-1:0",
+		model: "openai.gpt-oss-safeguard-20b",
 		region: "ap-southeast-2",
 		temperature: 0,
 		additionalModelRequestFields: {
