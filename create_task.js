@@ -1,6 +1,5 @@
 import application from "application";
 import { CreateTaskInput } from "./create-task-input.js";
-import TaskClient from "@/module/clients/TaskClient";
 
 const createTask = async (state) => {
 	if (!application.settings.isProduction()) {
@@ -16,8 +15,7 @@ const createTask = async (state) => {
 	});
 
 	try {
-		const tc = new TaskClient();
-		const taskId = tc.createTask(
+		const taskId = application.getClientFactory().getTaskClient().createTask(
 			state.controllingOrg,
 			input
 		);
