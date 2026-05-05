@@ -124,7 +124,7 @@ const decideOutcome = async (state) => {
 
 			Drop approvals only for clear evidence of:
 			- Significant feature logic changes
-			- Changes to security, auth, permissions, billing, data deletion, migrations, concurrency, or production config
+			- Changes to security, billing, data deletion, or migrations
 
 			Decide based on the following commit diff:
 		` },
