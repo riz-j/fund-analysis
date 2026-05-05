@@ -14,24 +14,22 @@ const createTask = async (state) => {
 		filesChanged: prFilesChanged,
 	});
 
-	try {
-		const taskId = application.getClientFactory().getTaskClient().createTask(
-			state.controllingOrg,
-			input
-		);
-	
-		return {
-			created: true,
-			taskId,
-		};
+	const taskId = application.getClientFactory().getTaskClient().createTask(
+		state.controllingOrg,
+		input
+	);
 
-	} catch (error) {
+	if (!taskId) {
 		return {
 			created: false,
-			error: error.message,
+			error: "Failed to create task",
 		};
 	}
 
+	return {
+		created: true,
+		taskId,
+	};
 }
 
 export default createTask;
