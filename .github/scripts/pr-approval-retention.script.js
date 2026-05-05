@@ -1,7 +1,7 @@
 import { StateGraph, START, END, Annotation } from "@langchain/langgraph";
-import { ChatOpenRouter } from "@langchain/openrouter";
-import axios from "axios";
+import { ChatBedrockConverse } from "@langchain/aws";
 import { z } from "zod";
+import axios from "axios";
 
 /** @node */
 const beforeStart = (state) => {
@@ -69,7 +69,7 @@ const routeWorkflow = (state) => {
 		return "retainApprovals";
 	}
 
-	if (/merge branch.*(master|main)/i.test(state.commitData.message.trim())) {
+	if (/merge.*branch.*(master|main)/i.test(state.commitData.message.trim())) {
 		return "retainApprovals";
 	}
 
@@ -82,21 +82,20 @@ const routeWorkflow = (state) => {
 
 /** @node */
 const decideOutcome = async (state) => {
-	const model = new ChatOpenRouter({
-		model: "openai/gpt-5.4-nano",
-		apiKey: state.openrouterApiKey,
-		temperature: 0.0,
-		modelKwargs: {
-			reasoning: {
-				enabled: true,
-				effort: "high",
-			}
-		}
-	})
-	.withStructuredOutput(z.object({
+	const model = new ChatBedrockConverse({
+		model: "openai.gpt-oss-120b-1:0",
+		region: "ap-southeast-2",
+		temperature: 0,
+		additionalModelRequestFields: {
+			reasoning_effort: "medium",
+		},
+	}).withStructuredOutput(z.object({
 		decision: z.enum(["drop_approvals", "retain_approvals"]),
 		justification: z.string(),
-	}));
+	}), {
+		method: "json_schema",
+		includeRaw: true,
+	});
 
 	const result = await model.invoke([
 		{ role: "system", content: `
@@ -124,10 +123,8 @@ const decideOutcome = async (state) => {
 			- More review might be nice
 
 			Drop approvals only for clear evidence of:
-			- Breaking API or user-facing behavior changes
 			- Significant feature logic changes
 			- Changes to security, auth, permissions, billing, data deletion, migrations, concurrency, or production config
-			- Changes likely to cause regressions
 
 			Decide based on the following commit diff:
 		` },
@@ -141,8 +138,8 @@ const decideOutcome = async (state) => {
 	]);
 
 	return {
-		decision: result.decision,
-		justification: result.justification,
+		decision: result.parsed.decision,
+		justification: result.parsed.justification,
 	};
 }
 
@@ -204,7 +201,6 @@ const GraphStateSchema = z.object({
 	githubToken: z.string().min(1),
 	githubRepository: z.string().min(1),
 	githubPrNumber: z.number().int().positive(),
-	openrouterApiKey: z.string().min(1),
 
 	decision: z.enum(["drop_approvals", "retain_approvals"]).optional(),
 	justification: z.string().optional(),
@@ -224,7 +220,6 @@ const GraphState = Annotation.Root({
 	githubToken: Annotation(),
 	githubRepository: Annotation(),
 	githubPrNumber: Annotation(),
-	openrouterApiKey: Annotation(),
 
 	decision: Annotation({ default: "drop_approvals" }),
 	justification: Annotation({ default: "" }),
@@ -262,7 +257,6 @@ const result = await app.invoke({
 	githubToken: process.env.GITHUB_TOKEN,
 	githubRepository: process.env.GITHUB_REPOSITORY,
 	githubPrNumber: Number(process.env.GITHUB_PR_NUMBER),
-	openrouterApiKey: process.env.OPENROUTER_API_KEY,
 });
 
 console.log(result);

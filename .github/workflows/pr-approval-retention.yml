@@ -22,13 +22,21 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Prepare script workspace
+        run: |
+          mkdir -p "${{ runner.temp }}/pr-approval-retention"
+          cp .github/scripts/pr-approval-retention.script.js "${{ runner.temp }}/pr-approval-retention/pr-approval-retention.script.js"
+          printf '{"private":true,"type":"module"}\n' > "${{ runner.temp }}/pr-approval-retention/package.json"
+
       - name: Install script dependencies
-        run: bun add @langchain/langgraph @langchain/openrouter axios zod
+        working-directory: ${{ runner.temp }}/pr-approval-retention
+        run: bun add @langchain/langgraph @langchain/aws axios zod
 
       - name: Run PR approval retention script
+        working-directory: ${{ runner.temp }}/pr-approval-retention
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: bun .github/scripts/pr-approval-retention.script.js
+        run: bun pr-approval-retention.script.js
