@@ -6,7 +6,7 @@ queryApi = QueryApi(api_key="fb321e42ca49c39216f83c64fe8443ed262d8671bca528fd03b
 query = {
     "query": "formType:\"13F\" AND holdings.cik:1318605 AND filedAt:[2014-01-01 TO 2014-03-31]",
     "from": "0",
-    "size": "25",
+    "size": "20",
     "sort": [{ "filedAt": { "order": "desc" } }]
 }
 
