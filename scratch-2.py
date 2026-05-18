@@ -1,18 +1,44 @@
-from sec_api import QueryApi
 import json
+import os
+from pathlib import Path
 
-queryApi = QueryApi(api_key="fb321e42ca49c39216f83c64fe8443ed262d8671bca528fd03bee9eb1a5bfa00")
+from sec_api import QueryApi
 
-query = {
-    "query": "formType:\"13F\" AND holdings.cik:1318605 AND filedAt:[2014-01-01 TO 2014-03-31]",
-    "from": "0",
-    "size": "20",
-    "sort": [{ "filedAt": { "order": "desc" } }]
-}
 
-filings = queryApi.get_filings(query)
+API_KEY_ENV_VAR = "SEC_API_KEY"
+OUTPUT_FILE = Path("13f_filings_q1_2014.json")
 
-with open("13f_filings_q1_2014.json", "w") as f:
-    f.write(json.dumps(filings, indent=2))
+HOLDINGS_CIK = "1318605"
+START_DATE = "2014-01-01"
+END_DATE = "2014-03-31"
+RESULT_SIZE = 20
 
-print(filings)
+
+def build_query() -> dict:
+    return {
+        "query": (
+            f'formType:"13F" AND holdings.cik:{HOLDINGS_CIK} '
+            f"AND filedAt:[{START_DATE} TO {END_DATE}]"
+        ),
+        "from": "0",
+        "size": str(RESULT_SIZE),
+        "sort": [{"filedAt": {"order": "desc"}}],
+    }
+
+
+def main() -> None:
+    api_key = os.environ.get(API_KEY_ENV_VAR)
+    if not api_key:
+        raise RuntimeError(f"Set {API_KEY_ENV_VAR} before running this script.")
+
+    query_api = QueryApi(api_key=api_key)
+    filings = query_api.get_filings(build_query())
+
+    with OUTPUT_FILE.open("w", encoding="utf-8") as f:
+        json.dump(filings, f, indent=2)
+
+    print(json.dumps(filings, indent=2))
+
+
+if __name__ == "__main__":
+    main()
